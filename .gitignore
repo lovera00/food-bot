@@ -3,3 +3,4 @@
 /core.class.log
 /node_modules
 /queue.class.log
+.env
