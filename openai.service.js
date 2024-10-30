@@ -1,5 +1,4 @@
-const { Configuration,ChatCompletionRequestMessageRoleEnum,ChatCompletionResponseMessageRoleEnum,CreateImageRequestResponseFormatEnum,CreateImageRequestSizeEnum,OpenAIApi,OpenAIApiAxiosParamCreator,OpenAIApiFactory,OpenAIApiFp } = require('openai');
-const axios = require('axios');
+const { Configuration,ChatCompletionRequestMessageRoleEnum,OpenAIApi } = require('openai');
 
 const handlerOpenAI = async (text) => {
     const configuration = new Configuration({
