@@ -15,15 +15,15 @@ const employeesAddon = init(employeesAddonConfig);
 
 const flowSaludo = addKeyword("Hola")
 .addAnswer(['Bienvenido a Empanadas Mingo, ¿En qué puedo ayudarte? 🥟'])
-    
+
 const flowNoDisponible = addKeyword("No entiendo")
     .addAnswer(['Lo siento, no entiendo tu pregunta. ¿En qué puedo ayudarte?'])
 
 const flowPrincipal = addKeyword(EVENTS.WELCOME).addAction(
     async (ctx, ctxFn) => {
-         console.log("ctx", ctx);
-         console.log("ctxFn", ctxFn);
-         
+          console.log("ctx", ctx);
+          console.log("ctxFn", ctxFn);
+
           const text = await handlerOpenAI(ctx);
       
           const empleado = await employeesAddon.determine(text); 
@@ -41,7 +41,7 @@ const main = async () => {
     const adapterProvider = createProvider(BaileysProvider)
 
     /**
-   * 🤔 Empledos digitales
+   * 🤔 Empleos digitales
    * Imaginar cada empleado descrito con sus deberes de manera explicita
    */
   const employees = [
